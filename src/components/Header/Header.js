@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './Header.module.css';
-import { Link as ScrollLink } from 'react-scroll'; // Para scroll suave
+import { Link } from 'react-scroll'; // Para scroll suave
 import logo from '../../assets/logo.png'; // Asegúrate de tener un logo en assets
 
 function Header({ onReserveClick }) {
@@ -19,19 +19,19 @@ function Header({ onReserveClick }) {
             <nav className={`${styles.nav} ${menuOpen ? styles.open : ''}`}>
                 <ul>
                     <li>
-                        <ScrollLink to="salon-section" smooth={true} duration={500} onClick={() => setMenuOpen(false)}>
+                        <a href="#salon-section" >
                             Salón
-                        </ScrollLink>
+                        </a>
                     </li>
                     <li>
-                        <ScrollLink to="gallery-section" smooth={true} duration={500} onClick={() => setMenuOpen(false)}>
+                        <a href="#gallery-section" >
                             Galería
-                        </ScrollLink>
+                        </a>
                     </li>
                     <li>
-                        <ScrollLink to="testimonials-section" smooth={true} duration={500} onClick={() => setMenuOpen(false)}>
+                        <a href="#testimonials-section" >
                             Testimonios
-                        </ScrollLink>
+                        </a>
                     </li>
                     <li>
                         <button className={styles.reserveButton} onClick={onReserveClick}>
