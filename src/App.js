@@ -67,12 +67,12 @@ function App() {
   };
 
   const galleryImages = [
-    { src: '/assets/gallery-img-1.jpeg', alt: 'Evento nocturno' },
-    { src: '/assets/gallery-img-2.jpeg', alt: 'Decoración floral' },
-    { src: '/assets/gallery-img-3.jpeg', alt: 'Mesa de dulces' },
-    { src: '/assets/gallery-img-4.jpeg', alt: 'Pista de baile' },
-    { src: '/assets/gallery-img-5.jpeg', alt: 'Barra de bebidas' },
-    { src: '/assets/gallery-img-6.jpeg', alt: 'Fachada del salón' },
+    { src: './assets/gallery-img-1.jpeg', alt: 'Evento nocturno' },
+    { src: './assets/gallery-img-2.jpeg', alt: 'Decoración floral' },
+    { src: './assets/gallery-img-3.jpeg', alt: 'Mesa de dulces' },
+    { src: './assets/gallery-img-4.jpeg', alt: 'Pista de baile' },
+    { src: './assets/gallery-img-5.jpeg', alt: 'Barra de bebidas' },
+    { src: './assets/gallery-img-6.jpeg', alt: 'Fachada del salón' },
   ];
 
   return (

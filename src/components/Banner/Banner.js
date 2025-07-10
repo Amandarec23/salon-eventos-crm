@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Banner.module.css';
 // Asegúrate que la ruta a tu imagen sea la correcta
-import bannerImage from '../assets/banner.png'; 
+import bannerImage from '../../assets/banner.png'; 
 
 function Banner() {
     return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './SalonInfo.module.css';
-import salonImage from '../assets/salon-image.png'; // Asegúrate de tener esta imagen en tu proyecto
+import salonImage from '../../assets/salon-image.png'; // Asegúrate de tener esta imagen en tu proyecto
 
 function SalonInfo() {
     return (

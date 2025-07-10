@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './NewTestimonialForm.css'; 
-import flowersImage from '../assets/flowers.png'
+import flowersImage from '../../assets/flowers.png'
 
 function NewTestimonialForm() {
     const [formData, setFormData] = useState({

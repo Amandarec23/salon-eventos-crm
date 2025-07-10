@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './SalonServicios.module.css';
-import servicio1 from '../assets/servicio1.png'; // Imagen de la boda
-import servicio2 from '../assets/servicio2.png'; // Tienda con luces
-import servicio3 from '../assets/servicio3.png'; // Mesa de banquete
+import servicio1 from '../../assets/servicio1.png'; // Imagen de la boda
+import servicio2 from '../../assets/servicio2.png'; // Tienda con luces
+import servicio3 from '../../assets/servicio3.png'; // Mesa de banquete
 
 function SalonServicios() {
     return (

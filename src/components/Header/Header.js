@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './Header.module.css';
 import { Link as ScrollLink } from 'react-scroll'; // Para scroll suave
-import logo from '../assets/logo.png'; // Asegúrate de tener un logo en assets
+import logo from '../../assets/logo.png'; // Asegúrate de tener un logo en assets
 
 function Header({ onReserveClick }) {
     const [menuOpen, setMenuOpen] = useState(false);

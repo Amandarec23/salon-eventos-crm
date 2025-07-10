@@ -1,6 +1,6 @@
 .testimonial-container {
     position: relative;
-    background-image: url('../assets/flowers.png');
+    background-image: url('../../assets/flowers.png');
     background-size: cover;
     background-position: center;
     background-blend-mode: multiply;

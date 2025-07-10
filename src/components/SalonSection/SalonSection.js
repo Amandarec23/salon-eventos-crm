@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './SalonSection.module.css';
 import { scroller } from 'react-scroll'; // Para el enlace de anclaje
-import fundadoraImage from '../assets/fundadora.png'; // Import the image
+import fundadoraImage from '../../assets/fundadora.png'; // Import the image
 
 function SalonSection({ salon, onReserveClick }) {
     // Función para desplazar a la sección de reserva
