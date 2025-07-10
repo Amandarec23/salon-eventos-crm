@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 
 import Header from './components/Header/Header';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Banner from './components/Banner/Banner';
 import SalonSection from './components/SalonSection/SalonSection';
 import GallerySection from './components/GallerySection/GallerySection';
@@ -9,6 +10,7 @@ import TestimonialsSection from './components/TestimonialsSection/TestimonialsSe
 import Footer from './components/Footer/Footer';
 import Modal from './components/Modal/Modal';
 import ReservationForm from './components/ReservationForm/ReservationForm';
+import ReservationsList from './components/ReservationForm/ReservationsList';
 import NewTestimonialForm from './components/TestimonialsSection/NewTestimonialForm';
 import './App.css';
 import SalonInfo from './components/SalonSection/SalonInfo';
@@ -20,6 +22,13 @@ import g4 from './assets/gallery-img-4.jpeg';
 import g5 from './assets/gallery-img-5.jpeg';
 import g6 from './assets/gallery-img-6.jpeg';
 function App() {
+  // Enlace de navegación simple para ejemplo
+  const Navigation = () => (
+    <nav style={{textAlign: 'center', margin: '1rem 0'}}>
+      <Link to="/" style={{ marginRight: '1rem' }}>Inicio</Link>
+      <Link to="/reservas">Ver Reservas</Link>
+    </nav>
+  );
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [testimonialsData, setTestimonialsData] = useState([]);
 
@@ -81,27 +90,34 @@ function App() {
   ];
 
   return (
-    <div className="App">
-      <Header onReserveClick={openReservationModal} />
-      <main>
-        <Banner onReserveClick={openReservationModal} />
-        <SalonSection salon={salonData} onReserveClick={openReservationModal} />
-        <SalonInfo />
-        <SalonServicios />
-        <GallerySection images={galleryImages} />
-        <TestimonialsSection testimonials={testimonialsData} />
-        <NewTestimonialForm />
-      </main>
-      <Footer />
-
-      <Modal isOpen={isModalOpen} onClose={closeReservationModal}>
-        <ReservationForm
-          onClose={closeReservationModal}
-          salonPriceDay={salonData.pricePerDay}
-          salonPriceNight={salonData.pricePerNight}
-        />
-      </Modal>
-    </div>
+    <Router>
+      <div className="App">
+        <Header onReserveClick={openReservationModal} />
+        <Navigation />
+        <Routes>
+          <Route path="/" element={
+            <main>
+              <Banner onReserveClick={openReservationModal} />
+              <SalonSection salon={salonData} onReserveClick={openReservationModal} />
+              <SalonInfo />
+              <SalonServicios />
+              <GallerySection images={galleryImages} />
+              <TestimonialsSection testimonials={testimonialsData} />
+              <NewTestimonialForm />
+            </main>
+          } />
+          <Route path="/reservas" element={<ReservationsList />} />
+        </Routes>
+        <Footer />
+        <Modal isOpen={isModalOpen} onClose={closeReservationModal}>
+          <ReservationForm
+            onClose={closeReservationModal}
+            salonPriceDay={salonData.pricePerDay}
+            salonPriceNight={salonData.pricePerNight}
+          />
+        </Modal>
+      </div>
+    </Router>
   );
 }
 
