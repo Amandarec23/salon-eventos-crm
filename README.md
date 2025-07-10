@@ -157,4 +157,4 @@ Agrega capturas de pantalla de tu proyecto usando esta sintaxis:
 
 Este proyecto está bajo la [Licencia MIT](LICENSE). Consulta el archivo `LICENSE` para más detalles.
 
-## 👤 Autor: David Caro Morales🚀
+## 👤 Autor: Amanda Recuero - Sandra Jimenez🚀
