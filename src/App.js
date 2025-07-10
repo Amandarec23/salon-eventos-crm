@@ -13,7 +13,12 @@ import NewTestimonialForm from './components/TestimonialsSection/NewTestimonialF
 import './App.css';
 import SalonInfo from './components/SalonSection/SalonInfo';
 import SalonServicios from './components/SalonSection/SalonServicios';
-
+import g1 from './assets/gallery-img-1.jpeg';
+import g2 from './assets/gallery-img-2.jpeg';
+import g3 from './assets/gallery-img-3.jpeg';
+import g4 from './assets/gallery-img-4.jpeg';
+import g5 from './assets/gallery-img-5.jpeg';
+import g6 from './assets/gallery-img-6.jpeg';
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [testimonialsData, setTestimonialsData] = useState([]);
@@ -65,14 +70,14 @@ function App() {
       { src: '/assets/salon-img-3.jpg', alt: 'Área de recepción' },
     ]
   };
-
+  
   const galleryImages = [
-    { src: './assets/gallery-img-1.jpeg', alt: 'Evento nocturno' },
-    { src: './assets/gallery-img-2.jpeg', alt: 'Decoración floral' },
-    { src: './assets/gallery-img-3.jpeg', alt: 'Mesa de dulces' },
-    { src: './assets/gallery-img-4.jpeg', alt: 'Pista de baile' },
-    { src: './assets/gallery-img-5.jpeg', alt: 'Barra de bebidas' },
-    { src: './assets/gallery-img-6.jpeg', alt: 'Fachada del salón' },
+    { src: g1, alt: 'Evento nocturno' },
+    { src: g2, alt: 'Decoración floral' },
+    { src: g3, alt: 'Mesa de dulces' },
+    { src: g4, alt: 'Pista de baile' },
+    { src: g5, alt: 'Barra de bebidas' },
+    { src: g6, alt: 'Fachada del salón' },
   ];
 
   return (
